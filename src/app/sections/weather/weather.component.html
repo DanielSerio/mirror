@@ -1,0 +1,13 @@
+<div class="weather">
+  <div class="currently">
+    <div class="temp h2">{{weatherResponse.currently.temperature | roundNumber}}°F</div>
+    <div class="details">
+      <div class="high">High: {{weatherResponse.daily.data[0].temperatureHigh | roundNumber}}°F</div>
+      <div class="icon">
+        <app-weather-icon size="large" [name]="weatherResponse.currently.icon"></app-weather-icon>
+      </div>
+      <div class="low">Low: {{weatherResponse.daily.data[0].temperatureLow | roundNumber}}°F</div>
+    </div>
+  </div>
+  <ul class="forecast-week"></ul>
+</div>

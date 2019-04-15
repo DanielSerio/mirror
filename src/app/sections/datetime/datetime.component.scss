@@ -1,0 +1,25 @@
+@import '../../../scss/config';
+
+.datetime {
+  white-space: nowrap;
+}
+
+.datetime,
+.time,
+.secondary { display: flex; }
+
+.datetime,
+.secondary { flex-direction: column; }
+
+.secondary {
+  margin-left: px($font-size-base);
+  justify-content: center;
+  font-weight: 700;
+}
+
+.seconds {
+  margin-top: 4px;
+  opacity: 0.5;
+}
+
+.ampm { margin-top: -6px; }

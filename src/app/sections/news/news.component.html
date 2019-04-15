@@ -1,0 +1,11 @@
+<div class="news">
+  <ul class="articles">
+    <li class="headline" *ngFor="let article of articles">
+      <div class="title">{{article.title}}</div>
+      <div class="details">
+        <div class="name">{{article.source.name}}</div>
+        <div class="author">{{article.author}}</div>
+      </div>
+    </li>
+  </ul>
+</div>

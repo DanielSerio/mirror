@@ -1,0 +1,10 @@
+<div class="datetime">
+  <div class="date h3">{{datetime | date: 'EEEE MMMM dd, yyyy'}}</div>
+  <div class="time">
+    <div class="primary h1">{{datetime | date: 'h:mm'}}</div>
+    <div class="secondary">
+      <div class="seconds h3">{{datetime | date: 'ss'}}</div>
+      <div class="ampm h3">{{datetime | date: 'a'}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+@import './config';
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@mixin heading($step) {
+  $blh: $line-height-base * $font-size;
+  $fntsz: ($step * $font-scale) * $font-size; 
+
+  font-size: px($fntsz);
+
+  @if ($fntsz > $blh) {
+    line-height: px(ceil($blh / $fntsz) * $fntsz);
+  } @else {
+    line-height: $line-height-base;
+  }
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: px($font-size);
+  line-height: $line-height-base;
+  background: black;
+  color: white;
+}
+
+.h1 { @include heading(3); }
+.h2 { @include heading(2); }
+.h3 { @include heading(1); }
+
