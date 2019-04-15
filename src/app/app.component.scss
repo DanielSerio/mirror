@@ -7,9 +7,9 @@
 
   .header,
   .content,
-  .footer { 
+  .footer {
     position: relative;
-    padding: px($font-size * 2); 
+    padding: px($font-size * 2);
   }
 
   .content { flex: 1; }
@@ -24,3 +24,5 @@
 .container {
   width: 100%;
 }
+
+.footer > .container > .section { flex: 1; }

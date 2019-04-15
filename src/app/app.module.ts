@@ -7,6 +7,7 @@ import { NewsComponent } from './sections/news/news.component';
 import { RoundNumberPipe } from './shared/pipes/round-number.pipe';
 import { WeatherComponent } from './sections/weather/weather.component';
 import { WeatherIconComponent } from './icons/weather-icon/weather-icon.component';
+import { WeatherDatePipe } from './shared/pipes/weather-date.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +15,8 @@ import { WeatherIconComponent } from './icons/weather-icon/weather-icon.componen
     WeatherComponent,
     NewsComponent,
     RoundNumberPipe,
-    WeatherIconComponent
+    WeatherIconComponent,
+    WeatherDatePipe
   ],
   imports: [
     BrowserModule,

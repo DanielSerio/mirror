@@ -9,5 +9,15 @@
       <div class="low">Low: {{weatherResponse.daily.data[0].temperatureLow | roundNumber}}°F</div>
     </div>
   </div>
-  <ul class="forecast-week"></ul>
+  <ul class="forecast-week">
+    <li class="forecast-day" *ngFor="let day of weatherResponse.daily.data">
+      <div class="date">{{day.time | weatherDate: 'EEE'}}</div>
+      <div class="icon">
+        <app-weather-icon size="small" [name]="day.icon"></app-weather-icon>
+      </div>
+      <div class="day-high">{{day.temperatureHigh | roundNumber}}°F</div>
+      <span>&nbsp;/&nbsp;</span>
+      <div class="day-low">{{day.temperatureLow | roundNumber}}°F</div>
+    </li>
+  </ul>
 </div>
