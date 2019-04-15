@@ -1,4 +1,4 @@
-<div class="weather">
+<div class="weather" *ngIf="weatherResponse">
   <div class="currently">
     <div class="temp h2">{{weatherResponse.currently.temperature | roundNumber}}°F</div>
     <div class="details">
